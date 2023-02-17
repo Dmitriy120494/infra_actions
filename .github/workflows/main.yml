@@ -53,8 +53,7 @@ jobs:
         username: ${{ secrets.USER }}
         key: ${{ secrets.SSH_KEY }}
         script: |
-          sudo docker pull Dmitriy94/infra_actions
-          #остановка всех контейнеров
+          sudo docker pull dmitriy94/infra_actions
           sudo docker stop $(sudo docker ps -a -q)
-          sudo docker run --rm -d -p 5000:5000 Dmitriy94/infra_actions
+          sudo docker run --rm -d -p 5000:5000 dmitriy94/infra_actions
 
